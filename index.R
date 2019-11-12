@@ -11,7 +11,7 @@ library(sf)
 library(leaflet.minicharts)
 
 
-iDir <- "D:/OneDrive - CGIAR/Dev/ifad_beneficiaries"
+iDir <- "."
 
 wards  <- readOGR(paste0(iDir, "/data/ward_boundaries.shp"))
 ben_wards <- read_csv(paste0(iDir, "/data/", "benefeciaries.csv"))
