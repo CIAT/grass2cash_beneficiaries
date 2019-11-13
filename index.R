@@ -67,12 +67,18 @@ map.ll <- leaflet() %>%
                 chartdata = ben_wards_data[, c("Brachiaria Cayman", "Brachiaria MG4", "Brachiaria Mulato II", "Brachiaria Xaraes", "Panicum Masaai", "Panicum Mombasa", "Panicum Tanzania")],
                 colorPalette = colors,
                 width = 60 * sqrt(ben_wards_data$total_beneficiaries) / sqrt(max(ben_wards_data$total_beneficiaries)), transitionTime = 0) %>%
+  
 
   # addLegend("topright",
   #           colors = colors, opacity = 1,
   #           labels = c("Brachiaria Cayman", "Brachiar MG4", "Brachiar Mulato II", "Brachiar Xaraes", "Panicum Masaai", "Panicum Mombasa", "Panicum Tanzania")) %>%
   
-  addLayersControl(overlayGroups = c("Ward boundaries", "Demo Trials"), options = layersControlOptions(collapsed = FALSE))
+  addLayersControl(overlayGroups = c("Ward boundaries", "Demo Trials"), options = layersControlOptions(collapsed = FALSE)) %>% 
+  
+  addControlGPS(options = gpsOptions(position = "topleft", activate = TRUE, 
+                                     autoCenter = TRUE, maxZoom = 60, 
+                                     setView = TRUE)) 
+# activateGPS()
 
 
 saveWidget(map.ll, file = paste0(iDir, "/", "index", ".html", sep = ""))
