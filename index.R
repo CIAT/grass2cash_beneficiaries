@@ -9,6 +9,7 @@ library(htmltools)
 library(rgdal)
 library(sf)
 library(leaflet.minicharts)
+library(leaflet.extras)
 
 
 iDir <- "."
