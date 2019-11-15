@@ -85,7 +85,7 @@ map.ll <- leaflet() %>%
   #           colors = colors, opacity = 1,
   #           labels = c("Brachiaria Cayman", "Brachiar MG4", "Brachiar Mulato II", "Brachiar Xaraes", "Panicum Masaai", "Panicum Mombasa", "Panicum Tanzania")) %>%
   
-  addLayersControl(overlayGroups = c("Ward boundaries", "Demo Trials"), options = layersControlOptions(collapsed = FALSE)) %>% 
+  addLayersControl(overlayGroups = c("Ward boundaries", "Woreda boundaries", "Demo Trials"), options = layersControlOptions(collapsed = FALSE)) %>% 
   
   addControlGPS(options = gpsOptions(position = "topleft", activate = TRUE, 
                                      autoCenter = TRUE, maxZoom = 60, 
