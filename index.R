@@ -52,7 +52,7 @@ map.ll <- leaflet() %>%
     group = "Demo Trials") %>% 
 
   addPolygons(data = ben_wards,
-              weight = 2,
+              weight = 3,
               color = "brown" ,
               dashArray = "3",
               fillOpacity = 0,
@@ -62,7 +62,7 @@ map.ll <- leaflet() %>%
                                                        padding = "3px 8px"), textsize = "15px", direction = "auto")) %>%
   
   addPolygons(data = woredas,
-              weight = 2,
+              weight = 3,
               color = "brown" ,
               dashArray = "3",
               fillOpacity = 0,
